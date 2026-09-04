@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2022",
+    "lib": ["es2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": ".homeybuild",
+    "noEmit": false,
+    "resolveJsonModule": true
+  },
+  "include": ["app.ts", "lib/**/*.ts", "drivers/**/*.ts"],
+  "exclude": ["node_modules", ".homeybuild"]
+}

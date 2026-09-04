@@ -1,0 +1,1261 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.lucaauletta.midea-cloud",
+  "version": "0.1.0",
+  "compatibility": ">=12.2.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "brandColor": "#1a73e8",
+  "name": {
+    "en": "Midea Cloud (NetHome Plus)",
+    "it": "Midea Cloud (NetHome Plus)"
+  },
+  "description": {
+    "en": "Control Midea, Comfee, Carrier and other NetHome Plus air conditioners through the Midea cloud",
+    "it": "Controlla i condizionatori Midea, Comfee, Carrier e altri compatibili NetHome Plus tramite il cloud Midea"
+  },
+  "category": [
+    "climate"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/app-small.png",
+    "large": "/assets/images/app-large.png",
+    "xlarge": "/assets/images/app-xlarge.png"
+  },
+  "author": {
+    "name": "Luca Auletta",
+    "email": "luca.auletta@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/lucaauletta/midea-cloud-homey/issues"
+  },
+  "source": "https://github.com/lucaauletta/midea-cloud-homey",
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "ECO mode turned off",
+          "it": "Modalità ECO disattivata"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_eco"
+          }
+        ],
+        "id": "midea_eco_false"
+      },
+      {
+        "title": {
+          "en": "ECO mode turned on",
+          "it": "Modalità ECO attivata"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_eco"
+          }
+        ],
+        "id": "midea_eco_true"
+      },
+      {
+        "title": {
+          "en": "Fan speed changed to",
+          "it": "Velocità ventola cambiata in"
+        },
+        "titleFormatted": {
+          "en": "Fan speed changed to [[midea_fan_speed]]",
+          "it": "Velocità ventola cambiata in [[midea_fan_speed]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_fan_speed"
+          },
+          {
+            "name": "midea_fan_speed",
+            "type": "dropdown",
+            "title": {
+              "en": "Fan speed",
+              "it": "Velocità ventola"
+            },
+            "values": [
+              {
+                "id": "auto",
+                "title": {
+                  "en": "Auto",
+                  "it": "Automatica"
+                }
+              },
+              {
+                "id": "silent",
+                "title": {
+                  "en": "Silent",
+                  "it": "Silenziosa"
+                }
+              },
+              {
+                "id": "low",
+                "title": {
+                  "en": "Low",
+                  "it": "Bassa"
+                }
+              },
+              {
+                "id": "medium",
+                "title": {
+                  "en": "Medium",
+                  "it": "Media"
+                }
+              },
+              {
+                "id": "high",
+                "title": {
+                  "en": "High",
+                  "it": "Alta"
+                }
+              },
+              {
+                "id": "full",
+                "title": {
+                  "en": "Full",
+                  "it": "Massima"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "midea_fan_speed_changed"
+      },
+      {
+        "title": {
+          "en": "Freeze protection turned off",
+          "it": "Antigelo disattivata"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_freeze_protection"
+          }
+        ],
+        "id": "midea_freeze_protection_false"
+      },
+      {
+        "title": {
+          "en": "Freeze protection turned on",
+          "it": "Antigelo attivata"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_freeze_protection"
+          }
+        ],
+        "id": "midea_freeze_protection_true"
+      },
+      {
+        "title": {
+          "en": "Mode changed to",
+          "it": "Modalità cambiata in"
+        },
+        "titleFormatted": {
+          "en": "Mode changed to [[midea_mode]]",
+          "it": "Modalità cambiata in [[midea_mode]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_mode"
+          },
+          {
+            "name": "midea_mode",
+            "type": "dropdown",
+            "title": {
+              "en": "Mode",
+              "it": "Modalità"
+            },
+            "values": [
+              {
+                "id": "off",
+                "title": {
+                  "en": "Off",
+                  "it": "Spento"
+                }
+              },
+              {
+                "id": "auto",
+                "title": {
+                  "en": "Auto",
+                  "it": "Automatico"
+                }
+              },
+              {
+                "id": "cool",
+                "title": {
+                  "en": "Cool",
+                  "it": "Raffreddamento"
+                }
+              },
+              {
+                "id": "heat",
+                "title": {
+                  "en": "Heat",
+                  "it": "Riscaldamento"
+                }
+              },
+              {
+                "id": "dry",
+                "title": {
+                  "en": "Dry",
+                  "it": "Deumidificazione"
+                }
+              },
+              {
+                "id": "fan",
+                "title": {
+                  "en": "Fan only",
+                  "it": "Solo ventilazione"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "midea_mode_changed"
+      },
+      {
+        "title": {
+          "en": "Swing changed to",
+          "it": "Oscillazione cambiata in"
+        },
+        "titleFormatted": {
+          "en": "Swing changed to [[midea_swing_mode]]",
+          "it": "Oscillazione cambiata in [[midea_swing_mode]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_swing_mode"
+          },
+          {
+            "name": "midea_swing_mode",
+            "type": "dropdown",
+            "title": {
+              "en": "Swing",
+              "it": "Oscillazione"
+            },
+            "values": [
+              {
+                "id": "off",
+                "title": {
+                  "en": "Off",
+                  "it": "Ferma"
+                }
+              },
+              {
+                "id": "vertical",
+                "title": {
+                  "en": "Vertical",
+                  "it": "Verticale"
+                }
+              },
+              {
+                "id": "horizontal",
+                "title": {
+                  "en": "Horizontal",
+                  "it": "Orizzontale"
+                }
+              },
+              {
+                "id": "both",
+                "title": {
+                  "en": "Both",
+                  "it": "Entrambe"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "midea_swing_mode_changed"
+      },
+      {
+        "title": {
+          "en": "Turbo mode turned off",
+          "it": "Modalità Turbo disattivata"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_turbo"
+          }
+        ],
+        "id": "midea_turbo_false"
+      },
+      {
+        "title": {
+          "en": "Turbo mode turned on",
+          "it": "Modalità Turbo attivata"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_turbo"
+          }
+        ],
+        "id": "midea_turbo_true"
+      }
+    ],
+    "conditions": [
+      {
+        "title": {
+          "en": "ECO mode !{{is|isn't}} on",
+          "it": "Modalità ECO !{{è|non è}} attivo"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac"
+          }
+        ],
+        "id": "midea_eco_is_true"
+      },
+      {
+        "title": {
+          "en": "Fan speed !{{is|isn't}}",
+          "it": "Velocità ventola !{{è|non è}}"
+        },
+        "titleFormatted": {
+          "en": "Fan speed !{{is|isn't}} [[midea_fan_speed]]",
+          "it": "Velocità ventola !{{è|non è}} [[midea_fan_speed]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_fan_speed"
+          },
+          {
+            "name": "midea_fan_speed",
+            "type": "dropdown",
+            "title": {
+              "en": "Fan speed",
+              "it": "Velocità ventola"
+            },
+            "values": [
+              {
+                "id": "auto",
+                "title": {
+                  "en": "Auto",
+                  "it": "Automatica"
+                }
+              },
+              {
+                "id": "silent",
+                "title": {
+                  "en": "Silent",
+                  "it": "Silenziosa"
+                }
+              },
+              {
+                "id": "low",
+                "title": {
+                  "en": "Low",
+                  "it": "Bassa"
+                }
+              },
+              {
+                "id": "medium",
+                "title": {
+                  "en": "Medium",
+                  "it": "Media"
+                }
+              },
+              {
+                "id": "high",
+                "title": {
+                  "en": "High",
+                  "it": "Alta"
+                }
+              },
+              {
+                "id": "full",
+                "title": {
+                  "en": "Full",
+                  "it": "Massima"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "midea_fan_speed_is"
+      },
+      {
+        "title": {
+          "en": "Freeze protection !{{is|isn't}} on",
+          "it": "Antigelo !{{è|non è}} attivo"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac"
+          }
+        ],
+        "id": "midea_freeze_protection_is_true"
+      },
+      {
+        "title": {
+          "en": "Mode !{{is|isn't}}",
+          "it": "Modalità !{{è|non è}}"
+        },
+        "titleFormatted": {
+          "en": "Mode !{{is|isn't}} [[midea_mode]]",
+          "it": "Modalità !{{è|non è}} [[midea_mode]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_mode"
+          },
+          {
+            "name": "midea_mode",
+            "type": "dropdown",
+            "title": {
+              "en": "Mode",
+              "it": "Modalità"
+            },
+            "values": [
+              {
+                "id": "off",
+                "title": {
+                  "en": "Off",
+                  "it": "Spento"
+                }
+              },
+              {
+                "id": "auto",
+                "title": {
+                  "en": "Auto",
+                  "it": "Automatico"
+                }
+              },
+              {
+                "id": "cool",
+                "title": {
+                  "en": "Cool",
+                  "it": "Raffreddamento"
+                }
+              },
+              {
+                "id": "heat",
+                "title": {
+                  "en": "Heat",
+                  "it": "Riscaldamento"
+                }
+              },
+              {
+                "id": "dry",
+                "title": {
+                  "en": "Dry",
+                  "it": "Deumidificazione"
+                }
+              },
+              {
+                "id": "fan",
+                "title": {
+                  "en": "Fan only",
+                  "it": "Solo ventilazione"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "midea_mode_is"
+      },
+      {
+        "title": {
+          "en": "Swing !{{is|isn't}}",
+          "it": "Oscillazione !{{è|non è}}"
+        },
+        "titleFormatted": {
+          "en": "Swing !{{is|isn't}} [[midea_swing_mode]]",
+          "it": "Oscillazione !{{è|non è}} [[midea_swing_mode]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_swing_mode"
+          },
+          {
+            "name": "midea_swing_mode",
+            "type": "dropdown",
+            "title": {
+              "en": "Swing",
+              "it": "Oscillazione"
+            },
+            "values": [
+              {
+                "id": "off",
+                "title": {
+                  "en": "Off",
+                  "it": "Ferma"
+                }
+              },
+              {
+                "id": "vertical",
+                "title": {
+                  "en": "Vertical",
+                  "it": "Verticale"
+                }
+              },
+              {
+                "id": "horizontal",
+                "title": {
+                  "en": "Horizontal",
+                  "it": "Orizzontale"
+                }
+              },
+              {
+                "id": "both",
+                "title": {
+                  "en": "Both",
+                  "it": "Entrambe"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "midea_swing_mode_is"
+      },
+      {
+        "title": {
+          "en": "Turbo !{{is|isn't}} on",
+          "it": "Turbo !{{è|non è}} attivo"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac"
+          }
+        ],
+        "id": "midea_turbo_is_true"
+      }
+    ],
+    "actions": [
+      {
+        "title": {
+          "en": "Turn eco mode off",
+          "it": "Disattiva modalità eco"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_eco"
+          }
+        ],
+        "id": "midea_eco_set_false"
+      },
+      {
+        "title": {
+          "en": "Turn eco mode on",
+          "it": "Attiva modalità eco"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_eco"
+          }
+        ],
+        "id": "midea_eco_set_true"
+      },
+      {
+        "title": {
+          "en": "Set fan speed",
+          "it": "Imposta velocità ventola"
+        },
+        "titleFormatted": {
+          "en": "Set fan speed to [[midea_fan_speed]]",
+          "it": "Imposta velocità ventola su [[midea_fan_speed]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_fan_speed"
+          },
+          {
+            "name": "midea_fan_speed",
+            "type": "dropdown",
+            "title": {
+              "en": "Fan speed",
+              "it": "Velocità ventola"
+            },
+            "values": [
+              {
+                "id": "auto",
+                "title": {
+                  "en": "Auto",
+                  "it": "Automatica"
+                }
+              },
+              {
+                "id": "silent",
+                "title": {
+                  "en": "Silent",
+                  "it": "Silenziosa"
+                }
+              },
+              {
+                "id": "low",
+                "title": {
+                  "en": "Low",
+                  "it": "Bassa"
+                }
+              },
+              {
+                "id": "medium",
+                "title": {
+                  "en": "Medium",
+                  "it": "Media"
+                }
+              },
+              {
+                "id": "high",
+                "title": {
+                  "en": "High",
+                  "it": "Alta"
+                }
+              },
+              {
+                "id": "full",
+                "title": {
+                  "en": "Full",
+                  "it": "Massima"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "midea_fan_speed_set"
+      },
+      {
+        "title": {
+          "en": "Turn freeze protection off",
+          "it": "Disattiva antigelo"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_freeze_protection"
+          }
+        ],
+        "id": "midea_freeze_protection_set_false"
+      },
+      {
+        "title": {
+          "en": "Turn freeze protection on",
+          "it": "Attiva antigelo"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_freeze_protection"
+          }
+        ],
+        "id": "midea_freeze_protection_set_true"
+      },
+      {
+        "title": {
+          "en": "Set mode",
+          "it": "Imposta modalità"
+        },
+        "titleFormatted": {
+          "en": "Set mode to [[midea_mode]]",
+          "it": "Imposta modalità su [[midea_mode]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_mode"
+          },
+          {
+            "name": "midea_mode",
+            "type": "dropdown",
+            "title": {
+              "en": "Mode",
+              "it": "Modalità"
+            },
+            "values": [
+              {
+                "id": "off",
+                "title": {
+                  "en": "Off",
+                  "it": "Spento"
+                }
+              },
+              {
+                "id": "auto",
+                "title": {
+                  "en": "Auto",
+                  "it": "Automatico"
+                }
+              },
+              {
+                "id": "cool",
+                "title": {
+                  "en": "Cool",
+                  "it": "Raffreddamento"
+                }
+              },
+              {
+                "id": "heat",
+                "title": {
+                  "en": "Heat",
+                  "it": "Riscaldamento"
+                }
+              },
+              {
+                "id": "dry",
+                "title": {
+                  "en": "Dry",
+                  "it": "Deumidificazione"
+                }
+              },
+              {
+                "id": "fan",
+                "title": {
+                  "en": "Fan only",
+                  "it": "Solo ventilazione"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "midea_mode_set"
+      },
+      {
+        "title": {
+          "en": "Set swing",
+          "it": "Imposta oscillazione"
+        },
+        "titleFormatted": {
+          "en": "Set swing to [[midea_swing_mode]]",
+          "it": "Imposta oscillazione su [[midea_swing_mode]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_swing_mode"
+          },
+          {
+            "name": "midea_swing_mode",
+            "type": "dropdown",
+            "title": {
+              "en": "Swing",
+              "it": "Oscillazione"
+            },
+            "values": [
+              {
+                "id": "off",
+                "title": {
+                  "en": "Off",
+                  "it": "Ferma"
+                }
+              },
+              {
+                "id": "vertical",
+                "title": {
+                  "en": "Vertical",
+                  "it": "Verticale"
+                }
+              },
+              {
+                "id": "horizontal",
+                "title": {
+                  "en": "Horizontal",
+                  "it": "Orizzontale"
+                }
+              },
+              {
+                "id": "both",
+                "title": {
+                  "en": "Both",
+                  "it": "Entrambe"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "midea_swing_mode_set"
+      },
+      {
+        "title": {
+          "en": "Turn turbo mode off",
+          "it": "Disattiva modalità turbo"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_turbo"
+          }
+        ],
+        "id": "midea_turbo_set_false"
+      },
+      {
+        "title": {
+          "en": "Turn turbo mode on",
+          "it": "Attiva modalità turbo"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=ac&capabilities=midea_turbo"
+          }
+        ],
+        "id": "midea_turbo_set_true"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Air conditioner (cloud)",
+        "it": "Condizionatore (cloud)"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "onoff",
+        "midea_mode",
+        "target_temperature",
+        "measure_temperature",
+        "measure_temperature.outdoor",
+        "midea_fan_speed",
+        "midea_swing_mode",
+        "midea_turbo",
+        "midea_eco",
+        "midea_freeze_protection"
+      ],
+      "capabilitiesOptions": {
+        "target_temperature": {
+          "min": 16,
+          "max": 30,
+          "step": 0.5
+        },
+        "measure_temperature": {
+          "title": {
+            "en": "Indoor temperature",
+            "it": "Temperatura interna"
+          }
+        },
+        "measure_temperature.outdoor": {
+          "title": {
+            "en": "Outdoor temperature",
+            "it": "Temperatura esterna"
+          }
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "logo": "../../../assets/icon.svg",
+            "title": {
+              "en": "Sign in with your NetHome Plus account",
+              "it": "Accedi con il tuo account NetHome Plus"
+            },
+            "usernameLabel": {
+              "en": "E-mail",
+              "it": "E-mail"
+            },
+            "usernamePlaceholder": {
+              "en": "name@example.com",
+              "it": "nome@esempio.it"
+            },
+            "passwordLabel": {
+              "en": "Password",
+              "it": "Password"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "logo": "../../../assets/icon.svg",
+            "title": {
+              "en": "Sign in again with your NetHome Plus account",
+              "it": "Accedi di nuovo con il tuo account NetHome Plus"
+            },
+            "usernameLabel": {
+              "en": "E-mail",
+              "it": "E-mail"
+            },
+            "passwordLabel": {
+              "en": "Password",
+              "it": "Password"
+            }
+          }
+        }
+      ],
+      "images": {
+        "small": "/drivers/ac/assets/images/small.png",
+        "large": "/drivers/ac/assets/images/large.png",
+        "xlarge": "/drivers/ac/assets/images/xlarge.png"
+      },
+      "id": "ac",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Connection",
+            "it": "Connessione"
+          },
+          "children": [
+            {
+              "id": "polling_interval",
+              "type": "number",
+              "label": {
+                "en": "Polling interval (seconds)",
+                "it": "Intervallo di aggiornamento (secondi)"
+              },
+              "hint": {
+                "en": "How often the state is read from the Midea cloud. Keep it at 30 seconds or more to avoid rate limiting.",
+                "it": "Ogni quanto viene letto lo stato dal cloud Midea. Tieni 30 secondi o più per evitare limitazioni."
+              },
+              "value": 30,
+              "min": 10,
+              "max": 600,
+              "units": {
+                "en": "s",
+                "it": "s"
+              }
+            },
+            {
+              "id": "max_failures",
+              "type": "number",
+              "label": {
+                "en": "Failures before marking unavailable",
+                "it": "Errori prima di segnare non disponibile"
+              },
+              "value": 5,
+              "min": 1,
+              "max": 50
+            },
+            {
+              "id": "debug_level",
+              "type": "dropdown",
+              "label": {
+                "en": "Log level",
+                "it": "Livello di log"
+              },
+              "hint": {
+                "en": "Amount of detail written to the app log. Credentials are never logged.",
+                "it": "Quantità di dettagli scritti nel log dell'app. Le credenziali non vengono mai registrate."
+              },
+              "value": "info",
+              "values": [
+                {
+                  "id": "error",
+                  "label": {
+                    "en": "Errors only",
+                    "it": "Solo errori"
+                  }
+                },
+                {
+                  "id": "info",
+                  "label": {
+                    "en": "Information",
+                    "it": "Informazioni"
+                  }
+                },
+                {
+                  "id": "debug",
+                  "label": {
+                    "en": "Debug (cloud requests and frames)",
+                    "it": "Debug (richieste cloud e frame)"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Device info",
+            "it": "Informazioni dispositivo"
+          },
+          "children": [
+            {
+              "id": "appliance_id",
+              "type": "label",
+              "label": {
+                "en": "Appliance ID",
+                "it": "ID apparecchio"
+              },
+              "value": ""
+            },
+            {
+              "id": "serial_number",
+              "type": "label",
+              "label": {
+                "en": "Serial number",
+                "it": "Numero di serie"
+              },
+              "value": ""
+            },
+            {
+              "id": "model_number",
+              "type": "label",
+              "label": {
+                "en": "Model",
+                "it": "Modello"
+              },
+              "value": ""
+            },
+            {
+              "id": "account",
+              "type": "label",
+              "label": {
+                "en": "NetHome Plus account",
+                "it": "Account NetHome Plus"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "midea_eco": {
+      "type": "boolean",
+      "title": {
+        "en": "ECO",
+        "it": "ECO"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle",
+      "uiQuickAction": false
+    },
+    "midea_fan_speed": {
+      "type": "enum",
+      "title": {
+        "en": "Fan speed",
+        "it": "Velocità ventola"
+      },
+      "values": [
+        {
+          "id": "auto",
+          "title": {
+            "en": "Auto",
+            "it": "Automatica"
+          }
+        },
+        {
+          "id": "silent",
+          "title": {
+            "en": "Silent",
+            "it": "Silenziosa"
+          }
+        },
+        {
+          "id": "low",
+          "title": {
+            "en": "Low",
+            "it": "Bassa"
+          }
+        },
+        {
+          "id": "medium",
+          "title": {
+            "en": "Medium",
+            "it": "Media"
+          }
+        },
+        {
+          "id": "high",
+          "title": {
+            "en": "High",
+            "it": "Alta"
+          }
+        },
+        {
+          "id": "full",
+          "title": {
+            "en": "Full",
+            "it": "Massima"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker"
+    },
+    "midea_freeze_protection": {
+      "type": "boolean",
+      "title": {
+        "en": "Freeze protection (8 °C)",
+        "it": "Antigelo (8 °C)"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle",
+      "uiQuickAction": false
+    },
+    "midea_mode": {
+      "type": "enum",
+      "title": {
+        "en": "Mode",
+        "it": "Modalità"
+      },
+      "desc": {
+        "en": "Operating mode",
+        "it": "Modalità di funzionamento"
+      },
+      "values": [
+        {
+          "id": "off",
+          "title": {
+            "en": "Off",
+            "it": "Spento"
+          }
+        },
+        {
+          "id": "auto",
+          "title": {
+            "en": "Auto",
+            "it": "Automatico"
+          }
+        },
+        {
+          "id": "cool",
+          "title": {
+            "en": "Cool",
+            "it": "Raffreddamento"
+          }
+        },
+        {
+          "id": "heat",
+          "title": {
+            "en": "Heat",
+            "it": "Riscaldamento"
+          }
+        },
+        {
+          "id": "dry",
+          "title": {
+            "en": "Dry",
+            "it": "Deumidificazione"
+          }
+        },
+        {
+          "id": "fan",
+          "title": {
+            "en": "Fan only",
+            "it": "Solo ventilazione"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "insights": false
+    },
+    "midea_swing_mode": {
+      "type": "enum",
+      "title": {
+        "en": "Swing",
+        "it": "Oscillazione"
+      },
+      "values": [
+        {
+          "id": "off",
+          "title": {
+            "en": "Off",
+            "it": "Ferma"
+          }
+        },
+        {
+          "id": "vertical",
+          "title": {
+            "en": "Vertical",
+            "it": "Verticale"
+          }
+        },
+        {
+          "id": "horizontal",
+          "title": {
+            "en": "Horizontal",
+            "it": "Orizzontale"
+          }
+        },
+        {
+          "id": "both",
+          "title": {
+            "en": "Both",
+            "it": "Entrambe"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker"
+    },
+    "midea_turbo": {
+      "type": "boolean",
+      "title": {
+        "en": "Turbo",
+        "it": "Turbo"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle",
+      "uiQuickAction": false
+    }
+  }
+}

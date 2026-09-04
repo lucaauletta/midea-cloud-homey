@@ -1,0 +1,19 @@
+{
+  "name": "com.lucaauletta.midea-cloud",
+  "version": "0.1.0",
+  "description": "Midea / NetHome Plus air conditioners via cloud for Homey",
+  "main": "app.ts",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ext .ts .",
+    "validate": "npx homey app validate --level publish",
+    "probe": "node scripts/probe.mjs"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.9",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0"
+  }
+}
