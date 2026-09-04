@@ -1,0 +1,102 @@
+{
+  "name": {
+    "en": "Air conditioner (cloud)",
+    "it": "Condizionatore (cloud)"
+  },
+  "class": "thermostat",
+  "capabilities": [
+    "onoff",
+    "midea_mode",
+    "target_temperature",
+    "measure_temperature",
+    "measure_temperature.outdoor",
+    "midea_fan_speed",
+    "midea_swing_mode",
+    "midea_turbo",
+    "midea_eco",
+    "midea_freeze_protection"
+  ],
+  "capabilitiesOptions": {
+    "target_temperature": {
+      "min": 16,
+      "max": 30,
+      "step": 0.5
+    },
+    "measure_temperature": {
+      "title": {
+        "en": "Indoor temperature",
+        "it": "Temperatura interna"
+      }
+    },
+    "measure_temperature.outdoor": {
+      "title": {
+        "en": "Outdoor temperature",
+        "it": "Temperatura esterna"
+      }
+    }
+  },
+  "platforms": ["local"],
+  "connectivity": ["cloud"],
+  "pair": [
+    {
+      "id": "login_credentials",
+      "template": "login_credentials",
+      "options": {
+        "logo": "../../../assets/icon.svg",
+        "title": {
+          "en": "Sign in with your NetHome Plus account",
+          "it": "Accedi con il tuo account NetHome Plus"
+        },
+        "usernameLabel": {
+          "en": "E-mail",
+          "it": "E-mail"
+        },
+        "usernamePlaceholder": {
+          "en": "name@example.com",
+          "it": "nome@esempio.it"
+        },
+        "passwordLabel": {
+          "en": "Password",
+          "it": "Password"
+        }
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "repair": [
+    {
+      "id": "login_credentials",
+      "template": "login_credentials",
+      "options": {
+        "logo": "../../../assets/icon.svg",
+        "title": {
+          "en": "Sign in again with your NetHome Plus account",
+          "it": "Accedi di nuovo con il tuo account NetHome Plus"
+        },
+        "usernameLabel": {
+          "en": "E-mail",
+          "it": "E-mail"
+        },
+        "passwordLabel": {
+          "en": "Password",
+          "it": "Password"
+        }
+      }
+    }
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  }
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Connection",
+      "it": "Connessione"
+    },
+    "children": [
+      {
+        "id": "polling_interval",
+        "type": "number",
+        "label": {
+          "en": "Polling interval (seconds)",
+          "it": "Intervallo di aggiornamento (secondi)"
+        },
+        "hint": {
+          "en": "How often the state is read from the Midea cloud. Keep it at 30 seconds or more to avoid rate limiting.",
+          "it": "Ogni quanto viene letto lo stato dal cloud Midea. Tieni 30 secondi o più per evitare limitazioni."
+        },
+        "value": 30,
+        "min": 10,
+        "max": 600,
+        "units": {
+          "en": "s",
+          "it": "s"
+        }
+      },
+      {
+        "id": "max_failures",
+        "type": "number",
+        "label": {
+          "en": "Failures before marking unavailable",
+          "it": "Errori prima di segnare non disponibile"
+        },
+        "value": 5,
+        "min": 1,
+        "max": 50
+      },
+      {
+        "id": "debug_level",
+        "type": "dropdown",
+        "label": {
+          "en": "Log level",
+          "it": "Livello di log"
+        },
+        "hint": {
+          "en": "Amount of detail written to the app log. Credentials are never logged.",
+          "it": "Quantità di dettagli scritti nel log dell'app. Le credenziali non vengono mai registrate."
+        },
+        "value": "info",
+        "values": [
+          {
+            "id": "error",
+            "label": {
+              "en": "Errors only",
+              "it": "Solo errori"
+            }
+          },
+          {
+            "id": "info",
+            "label": {
+              "en": "Information",
+              "it": "Informazioni"
+            }
+          },
+          {
+            "id": "debug",
+            "label": {
+              "en": "Debug (cloud requests and frames)",
+              "it": "Debug (richieste cloud e frame)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Device info",
+      "it": "Informazioni dispositivo"
+    },
+    "children": [
+      {
+        "id": "appliance_id",
+        "type": "label",
+        "label": {
+          "en": "Appliance ID",
+          "it": "ID apparecchio"
+        },
+        "value": ""
+      },
+      {
+        "id": "serial_number",
+        "type": "label",
+        "label": {
+          "en": "Serial number",
+          "it": "Numero di serie"
+        },
+        "value": ""
+      },
+      {
+        "id": "model_number",
+        "type": "label",
+        "label": {
+          "en": "Model",
+          "it": "Modello"
+        },
+        "value": ""
+      },
+      {
+        "id": "account",
+        "type": "label",
+        "label": {
+          "en": "NetHome Plus account",
+          "it": "Account NetHome Plus"
+        },
+        "value": ""
+      }
+    ]
+  }
+]
