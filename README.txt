@@ -1,24 +1,23 @@
-Control your Midea, Comfee, Carrier, Senville and other NetHome Plus compatible air conditioners from Homey, through the Midea cloud.
+Midea is the world's largest manufacturer of air treatment products, and its air conditioners are sold under many names: Midea, Comfee, Carrier, Senville, Inventor, Artel and other brands that use the NetHome Plus app. This app brings those units into Homey and keeps them working after the change Midea made to its cloud.
 
-Since Midea closed the cloud endpoint that hands out the token and key needed for local (LAN) pairing, new units can no longer be added over the local network. This app talks to the Midea cloud instead, the same way the NetHome Plus app does when your phone is away from home, so pairing keeps working.
+In 2026 Midea closed the cloud service that handed out the token and key required to pair a unit over the local network. Existing Homey and home-automation integrations depend on that step, so new units can no longer be added. This app takes a different route: it talks to the Midea cloud the same way the NetHome Plus app does when you are away from home, so pairing and control keep working with nothing more than your NetHome Plus account.
 
-Features
-- Power on/off
-- Mode: auto, cool, heat, dry, fan only
-- Target temperature from 16 to 30 °C in 0.5 °C steps
-- Indoor and outdoor temperature
-- Fan speed: auto, silent, low, medium, high, full
-- Swing: off, vertical, horizontal, both
-- Turbo, ECO and 8 °C freeze protection
-- Flow cards (triggers, conditions and actions) for every function
-- Triggers also fire when the unit is changed from the remote control or the NetHome Plus app
+What you can do
+- Switch the unit on and off
+- Choose the mode: auto, cool, heat, dry or fan only
+- Set the target temperature from 16 to 30 °C in 0.5 °C steps
+- Read the indoor and outdoor temperature
+- Set the fan speed: auto, silent, low, medium, high or full
+- Control the swing: off, vertical, horizontal or both
+- Enable Turbo, ECO and the 8 °C freeze protection
+- Build Flows with triggers, conditions and actions for every function, including changes made from the remote control or the NetHome Plus app
 
-Setup
-1. Add the air conditioners to the NetHome Plus app first.
-2. In Homey add a device, choose this app and sign in with your NetHome Plus account.
-3. Pick the units you want to control.
+Getting started
+1. Add the air conditioners to the NetHome Plus app.
+2. In Homey add a new device, choose Midea Cloud and sign in with your NetHome Plus account.
+3. Select the units you want to control.
 
-Notes
+Good to know
 - An internet connection is required; there is no local fallback.
-- The state is refreshed by polling the cloud (30 seconds by default, adjustable in the device settings).
-- Use "Repair" on a device if you change your NetHome Plus password.
+- The state is refreshed by polling the cloud every 30 seconds by default. You can change the interval in the device settings.
+- If you change your NetHome Plus password, use Repair on the device to sign in again.

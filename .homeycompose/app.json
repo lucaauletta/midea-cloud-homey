@@ -12,8 +12,8 @@
     "it": "Midea Cloud"
   },
   "description": {
-    "en": "Control Midea, Comfee, Carrier and other NetHome Plus air conditioners through the Midea cloud",
-    "it": "Controlla i condizionatori Midea, Comfee, Carrier e altri compatibili NetHome Plus tramite il cloud Midea"
+    "en": "Keep your Midea air conditioners working with Homey through the cloud",
+    "it": "Mantieni i tuoi condizionatori Midea collegati a Homey tramite il cloud"
   },
   "category": [
     "climate"
