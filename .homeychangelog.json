@@ -5,5 +5,8 @@
   },
   "0.1.1": {
     "en": "First release: control NetHome Plus air conditioners through the Midea cloud."
+  },
+  "0.1.2": {
+    "en": "New app name, new images and store description."
   }
 }
