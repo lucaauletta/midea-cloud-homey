@@ -11,5 +11,8 @@
   },
   "0.1.3": {
     "en": "Fix icons that rendered as empty circles."
+  },
+  "0.1.4": {
+    "en": "Cloud added to the app icon."
   }
 }
