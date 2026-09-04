@@ -14,5 +14,8 @@
   },
   "0.1.4": {
     "en": "Cloud added to the app icon."
+  },
+  "0.1.5": {
+    "en": "Icons rebuilt with path elements only."
   }
 }
