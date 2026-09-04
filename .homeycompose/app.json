@@ -1,9 +1,11 @@
 {
   "id": "com.lucaauletta.midea-cloud",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "compatibility": ">=12.2.0",
   "sdk": 3,
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "brandColor": "#1a73e8",
   "name": {
     "en": "Midea Cloud (NetHome Plus)",
@@ -13,7 +15,9 @@
     "en": "Control Midea, Comfee, Carrier and other NetHome Plus air conditioners through the Midea cloud",
     "it": "Controlla i condizionatori Midea, Comfee, Carrier e altri compatibili NetHome Plus tramite il cloud Midea"
   },
-  "category": ["climate"],
+  "category": [
+    "climate"
+  ],
   "permissions": [],
   "images": {
     "small": "/assets/images/app-small.png",

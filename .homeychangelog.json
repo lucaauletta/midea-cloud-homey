@@ -2,5 +2,8 @@
   "0.1.0": {
     "en": "First version: control NetHome Plus air conditioners through the Midea cloud.",
     "it": "Prima versione: controllo dei condizionatori NetHome Plus tramite il cloud Midea."
+  },
+  "0.1.1": {
+    "en": "First release: control NetHome Plus air conditioners through the Midea cloud."
   }
 }
