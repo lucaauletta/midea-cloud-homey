@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <path fill-rule="evenodd" d="M16 24h68a8 8 0 0 1 8 8v26a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V32a8 8 0 0 1 8-8zm0 6a2 2 0 0 0-2 2v26a2 2 0 0 0 2 2h68a2 2 0 0 0 2-2V32a2 2 0 0 0-2-2H16z"/>
-  <rect x="16" y="49" width="68" height="6" rx="3"/>
-  <rect x="26" y="72" width="7" height="20" rx="3.5" transform="rotate(-12 29.5 82)"/>
+  <rect x="6" y="26" width="88" height="26" rx="7"/>
+  <rect x="12" y="57" width="76" height="7" rx="3.5"/>
+  <rect x="24" y="72" width="7" height="20" rx="3.5"/>
   <rect x="46.5" y="72" width="7" height="20" rx="3.5"/>
-  <rect x="67" y="72" width="7" height="20" rx="3.5" transform="rotate(12 70.5 82)"/>
+  <rect x="69" y="72" width="7" height="20" rx="3.5"/>
 </svg>
