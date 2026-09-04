@@ -1,4 +1,4 @@
-# Midea Cloud (NetHome Plus) for Homey
+# Midea Cloud for Homey
 
 Homey app (SDK 3, TypeScript) that controls Midea, Comfee, Carrier, Senville and other air
 conditioners that work with the **NetHome Plus** app, through the **Midea cloud** instead of the
