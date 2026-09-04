@@ -1,0 +1,13 @@
+{
+  "title": {
+    "en": "ECO mode !{{is|isn't}} on",
+    "it": "Modalità ECO !{{è|non è}} attivo"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ac"
+    }
+  ]
+}

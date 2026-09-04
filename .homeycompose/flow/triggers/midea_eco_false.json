@@ -1,0 +1,13 @@
+{
+  "title": {
+    "en": "ECO mode turned off",
+    "it": "Modalità ECO disattivata"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ac&capabilities=midea_eco"
+    }
+  ]
+}

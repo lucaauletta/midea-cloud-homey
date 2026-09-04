@@ -1,0 +1,69 @@
+{
+  "title": {
+    "en": "Mode !{{is|isn't}}",
+    "it": "Modalità !{{è|non è}}"
+  },
+  "titleFormatted": {
+    "en": "Mode !{{is|isn't}} [[midea_mode]]",
+    "it": "Modalità !{{è|non è}} [[midea_mode]]"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ac&capabilities=midea_mode"
+    },
+    {
+      "name": "midea_mode",
+      "type": "dropdown",
+      "title": {
+        "en": "Mode",
+        "it": "Modalità"
+      },
+      "values": [
+        {
+          "id": "off",
+          "title": {
+            "en": "Off",
+            "it": "Spento"
+          }
+        },
+        {
+          "id": "auto",
+          "title": {
+            "en": "Auto",
+            "it": "Automatico"
+          }
+        },
+        {
+          "id": "cool",
+          "title": {
+            "en": "Cool",
+            "it": "Raffreddamento"
+          }
+        },
+        {
+          "id": "heat",
+          "title": {
+            "en": "Heat",
+            "it": "Riscaldamento"
+          }
+        },
+        {
+          "id": "dry",
+          "title": {
+            "en": "Dry",
+            "it": "Deumidificazione"
+          }
+        },
+        {
+          "id": "fan",
+          "title": {
+            "en": "Fan only",
+            "it": "Solo ventilazione"
+          }
+        }
+      ]
+    }
+  ]
+}

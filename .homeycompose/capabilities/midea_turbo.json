@@ -1,0 +1,8 @@
+{
+  "type": "boolean",
+  "title": { "en": "Turbo", "it": "Turbo" },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "toggle",
+  "uiQuickAction": false
+}

@@ -1,0 +1,55 @@
+{
+  "title": {
+    "en": "Set swing",
+    "it": "Imposta oscillazione"
+  },
+  "titleFormatted": {
+    "en": "Set swing to [[midea_swing_mode]]",
+    "it": "Imposta oscillazione su [[midea_swing_mode]]"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ac&capabilities=midea_swing_mode"
+    },
+    {
+      "name": "midea_swing_mode",
+      "type": "dropdown",
+      "title": {
+        "en": "Swing",
+        "it": "Oscillazione"
+      },
+      "values": [
+        {
+          "id": "off",
+          "title": {
+            "en": "Off",
+            "it": "Ferma"
+          }
+        },
+        {
+          "id": "vertical",
+          "title": {
+            "en": "Vertical",
+            "it": "Verticale"
+          }
+        },
+        {
+          "id": "horizontal",
+          "title": {
+            "en": "Horizontal",
+            "it": "Orizzontale"
+          }
+        },
+        {
+          "id": "both",
+          "title": {
+            "en": "Both",
+            "it": "Entrambe"
+          }
+        }
+      ]
+    }
+  ]
+}

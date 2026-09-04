@@ -1,0 +1,15 @@
+{
+  "type": "enum",
+  "title": { "en": "Fan speed", "it": "Velocità ventola" },
+  "values": [
+    { "id": "auto", "title": { "en": "Auto", "it": "Automatica" } },
+    { "id": "silent", "title": { "en": "Silent", "it": "Silenziosa" } },
+    { "id": "low", "title": { "en": "Low", "it": "Bassa" } },
+    { "id": "medium", "title": { "en": "Medium", "it": "Media" } },
+    { "id": "high", "title": { "en": "High", "it": "Alta" } },
+    { "id": "full", "title": { "en": "Full", "it": "Massima" } }
+  ],
+  "getable": true,
+  "setable": true,
+  "uiComponent": "picker"
+}

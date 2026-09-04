@@ -1,0 +1,17 @@
+{
+  "type": "enum",
+  "title": { "en": "Mode", "it": "Modalità" },
+  "desc": { "en": "Operating mode", "it": "Modalità di funzionamento" },
+  "values": [
+    { "id": "off", "title": { "en": "Off", "it": "Spento" } },
+    { "id": "auto", "title": { "en": "Auto", "it": "Automatico" } },
+    { "id": "cool", "title": { "en": "Cool", "it": "Raffreddamento" } },
+    { "id": "heat", "title": { "en": "Heat", "it": "Riscaldamento" } },
+    { "id": "dry", "title": { "en": "Dry", "it": "Deumidificazione" } },
+    { "id": "fan", "title": { "en": "Fan only", "it": "Solo ventilazione" } }
+  ],
+  "getable": true,
+  "setable": true,
+  "uiComponent": "picker",
+  "insights": false
+}

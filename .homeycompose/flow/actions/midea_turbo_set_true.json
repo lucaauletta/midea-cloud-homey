@@ -1,0 +1,13 @@
+{
+  "title": {
+    "en": "Turn turbo mode on",
+    "it": "Attiva modalità turbo"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ac&capabilities=midea_turbo"
+    }
+  ]
+}

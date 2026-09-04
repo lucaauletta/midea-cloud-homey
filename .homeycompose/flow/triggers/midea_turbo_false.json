@@ -1,0 +1,13 @@
+{
+  "title": {
+    "en": "Turbo mode turned off",
+    "it": "Modalità Turbo disattivata"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ac&capabilities=midea_turbo"
+    }
+  ]
+}

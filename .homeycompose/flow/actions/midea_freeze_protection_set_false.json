@@ -1,0 +1,13 @@
+{
+  "title": {
+    "en": "Turn freeze protection off",
+    "it": "Disattiva antigelo"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ac&capabilities=midea_freeze_protection"
+    }
+  ]
+}

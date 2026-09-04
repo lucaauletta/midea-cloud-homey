@@ -1,0 +1,8 @@
+{
+  "type": "boolean",
+  "title": { "en": "Freeze protection (8 °C)", "it": "Antigelo (8 °C)" },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "toggle",
+  "uiQuickAction": false
+}

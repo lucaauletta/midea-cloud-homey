@@ -1,0 +1,13 @@
+{
+  "title": {
+    "en": "Freeze protection turned on",
+    "it": "Antigelo attivata"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=ac&capabilities=midea_freeze_protection"
+    }
+  ]
+}
