@@ -1,6 +1,6 @@
 {
   "id": "com.lucaauletta.midea-cloud",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "compatibility": ">=12.2.0",
   "sdk": 3,
   "platforms": [

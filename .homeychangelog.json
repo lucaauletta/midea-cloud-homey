@@ -17,5 +17,8 @@
   },
   "0.1.5": {
     "en": "Icons rebuilt with path elements only."
+  },
+  "1.0.0": {
+    "en": "First stable release."
   }
 }
