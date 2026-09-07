@@ -1,6 +1,6 @@
 {
   "name": "com.lucaauletta.midea-cloud",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "description": "Midea / NetHome Plus air conditioners via cloud for Homey",
   "main": "app.ts",
   "private": true,
